@@ -18,6 +18,11 @@ variable "account_id" {
   default     = ""
 }
 
+variable "account_alias" {
+  description = "AWS Account Alias"
+  default     = ""
+}
+
 variable "egress_whitelist" {
   description = "List of whitelisted CIDR ranges for SSH and private load balancer access"
   type        = "list"

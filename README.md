@@ -36,6 +36,7 @@ Edit the values in `variables.tf` so they are suitable for this particular proje
 | prefix                | Prefix to use for AWS resources, e.g. `ida`                                                   |
 | project               | Project name for AWS cost allocation tags                                                     |
 | account_id            | AWS Account ID                                                                                |
+| account_alias         | AWS Account Alias                                                                             |
 | egress_whitelist      | List of IP CIDR address ranges to add as a whitelist for SSH and private load balancer access |
 | domain                | Apex of DNS domain (e.g. `dlcs-ida.org`)                                                      |
 | bastion_ami           | Base Amazon Linux AMI to use                                                                  |
