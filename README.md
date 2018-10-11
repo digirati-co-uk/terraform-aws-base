@@ -12,8 +12,9 @@ A template to use when creating a new AWS estate.
   - [Setting up](#setting-up)
     - [1. Download base](#1-download-base)
     - [2. Configure variables for project](#2-configure-variables-for-project)
-    - [3. Configure Terraform provider](#3-configure-terraform-provider)
-    - [4. Add initial user](#4-add-initial-user)
+    - [3. Generate key pair](#3-generate-key-pair)
+    - [4. Configure Terraform provider](#4-configure-terraform-provider)
+    - [5. Add initial user](#5-add-initial-user)
   - [Topology](#topology)
 
 <!-- /TOC -->
@@ -47,7 +48,20 @@ Edit the values in `variables.tf` so they are suitable for this particular proje
 | subnet_private_1_cidr | CIDR of the first private subnet                                                              |
 | subnet_private_2_cidr | CIDR of the second private subnet                                                             |
 
-### 3. Configure Terraform provider
+### 3. Generate key pair
+
+Follow instructions when running:
+
+```
+ssh-keygen.exe -t rsa -b 2048
+```
+
+The output folder will contain a `.pub` file - overwrite the contents of this repository's `tf/files/key.pub` file with it.
+
+KEEP THE PRIVATE PART OF THE KEY SAFE - preferably lodge it in a secure storage silo.
+
+
+### 4. Configure Terraform provider
 
 Edit the marked values in `provider.tf`
 
@@ -66,7 +80,7 @@ terraform {
 }
 ```
 
-### 4. Add initial user
+### 5. Add initial user
 
 
 ## Topology
