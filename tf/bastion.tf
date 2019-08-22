@@ -6,7 +6,10 @@ module "bastion" {
   ami      = "${var.bastion_ami}"
   key_name = "${aws_key_pair.auth.key_name}"
   vpc      = "${module.vpc.vpc_id}"
-  subnet   = "${module.vpc.subnet_public_1_id}"
+  subnets   = [
+    "${module.vpc.subnet_public_1_id}",
+    "${module.vpc.subnet_public_2_id}",
+  ]
 
   ip_whitelist = [
     "${var.egress_whitelist}",
