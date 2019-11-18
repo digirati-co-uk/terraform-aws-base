@@ -3,4 +3,5 @@ module "iam_baseline" {
   project    = "${var.project}"
   prefix     = "${var.prefix}"
   account_id = "${var.account_id}"
+  account_alias = "${var.account_alias}"
 }
