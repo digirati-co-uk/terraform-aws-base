@@ -18,7 +18,7 @@ A template to use when creating a new AWS estate.
 
 <!-- /TOC -->
 
-Using Terraform 0.11.8
+Using Terraform 0.11.11
 
 ## Setting up
 
