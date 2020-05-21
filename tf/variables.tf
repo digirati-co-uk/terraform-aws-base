@@ -25,7 +25,7 @@ variable "account_alias" {
 
 variable "egress_whitelist" {
   description = "List of whitelisted CIDR ranges for SSH and private load balancer access"
-  type        = "list"
+  type        = list(string)
 
   default = []
 }

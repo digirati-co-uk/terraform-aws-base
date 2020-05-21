@@ -1,7 +1,7 @@
 # Certificates
 
 resource "aws_acm_certificate" "base" {
-  domain_name = "${var.domain}"
+  domain_name = var.domain
 
   subject_alternative_names = [
     "*.${var.domain}",
@@ -9,8 +9,9 @@ resource "aws_acm_certificate" "base" {
 
   validation_method = "DNS"
 
-  tags {
+  tags = {
     Name    = "${var.prefix}-base"
-    Project = "${var.project}"
+    Project = var.project
   }
 }
+
